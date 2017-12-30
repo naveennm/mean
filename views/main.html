@@ -18,7 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.8/angular.min.js"></script><!-- load angular -->
     <script>
     	
-    	var scotchTodo = angular.module('scotchTodo', []);
+    	var myapp = angular.module('myapp', []);
 function mainController($scope, $http) {
     resData = "Enter Details";
 
@@ -92,7 +92,7 @@ $scope.update = function(id) {
 
 </head>
 <!-- SET THE CONTROLLER AND GET ALL TODOS -->
-<body  ng-app="scotchTodo" >
+<body  ng-app="myapp" >
     <div class="container" ng-controller="mainController">
          <form>
                     <div class="form-group">
