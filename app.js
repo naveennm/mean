@@ -135,4 +135,8 @@ console.log(req.body.text);
 
 
 
-app.listen(80);
+const PORT = process.env.PORT || 80;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});
