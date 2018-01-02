@@ -7,7 +7,7 @@
 
     // configuration =================
 
-    mongoose.connect('mongodb://mean:mean@ds135537.mlab.com:35537/test123');     // connect to mongoDB database on modulus.io
+    mongoose.connect('mongodb://localhost:27017/test');     // connect to mongoDB database on modulus.io
 
     app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
@@ -49,7 +49,21 @@ app.use(bodyParser.urlencoded({
     });
 
     // create todo and send back all todos after creation
-    app.post('/api/todos', function(req, res) {
+    // app.post('/api/todos', function(req, res) {
+    //     console.log(req.body.text);
+    //     // create a todo, information comes from AJAX request from Angular
+    //     Todo.create({
+    //         text : req.body.text
+    //     }, function(err, todo) {
+    //         if (err)
+    //             res.send(err);
+
+    //         // get and return all the todos after you create another
+    //         return res.json('No data found');
+    //     });
+
+    // });
+  app.post('/api/todos', function(req, res) {
 
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
