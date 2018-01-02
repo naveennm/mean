@@ -135,8 +135,9 @@ console.log(req.body.text);
 
 
 
-const PORT = process.env.PORT || 80;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+const server = app.listen(8080, () => {
+  const host = server.address().address;
+  const port = server.address().port;
+
+  console.log(`Example app listening at http://${host}:${port}`);
 });
